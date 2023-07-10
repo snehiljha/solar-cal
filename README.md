@@ -1,1 +1,1 @@
-# solar-cal
+# Solar-Calculator
