@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description"
+        content="The one stop shop for accurate calculation of household solar power needs. With the Poseidon Solar Calculator, we take away the hassle and have you know in the fraction of a second what precise Solar unit to purchase.">
+    <meta name="Keywords" content="Solar, Energy, Power, Watt">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="theme-color" content="rgb(131, 127, 127)" />
+
+
+    <link rel="shortcut icon" href="Images/Logo/statcon_logo-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0e498dcbfc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Solar Calculator</title>
+    <style>
+        /* SIMPLE CUSTOMIZED SCROLLBAR */
+        /* width */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="Images/Logo/statcon_logo-1.png" height="60" alt="Frame">
+                </a>
+
+                <button class=" navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link ml-5 other-navItems" href="#how-it-work">How it Works</a>
+                        </li>
+                        <a href="#calc_section" class="btn btn-outline-primary rounded-pill ml-5" role="button">
+                            Calculate
+                            Solar Power</a>
+
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar -->
+
+        <!-- HOW-IT-WORKS-SECTION-START -->
+        <section id="how-it-work" class="how-it-works ">
+            <h3 id="how-it-works-header">How it works</h3>
+            <div id="how-it-works">
+                <div class="how-it-works-main">
+                    <img src="./Images/washing-machine.png" alt="washing-machine">
+                    <p class="appliance">1. Choose an appliance</p>
+                </div>
+                <div class="how-it-works-main">
+                    <img src="./Images/accounting.png" alt="accounting">
+                    <p class="appliance">2. Input appliance power</p>
+                </div>
+                <div class="how-it-works-main">
+                    <img src="./Images/clipboard.png" alt="clipboard">
+                    <p class="appliance">3. Calculate and get result</p>
+                </div>
+            </div>
+        </section>
+        <!-- HOW-IT-WORKS-SECTION-END -->
+
+        <!-- CALCULATION-SECTION-START -->
+        <section id="calc_section" class="calc_section">
+
+            <h4 class="mb-3 text-center text-uppercase color">solar power calculator</h4>
+
+            <div id="calc_inner">
+
+                <div class="flex1 flexy">
+                    <form method="post" class="form" id="calc_form">
+                        <div><label for="appliances">Appliances</label></div>
+                        <input list="appliances" name="appliances" class="smaller" id="appliance_input" required
+                            placeholder="Applicance">
+                        <datalist id="appliances">
+                            <option class="opt" value="REFRIGERATOR">
+                            <option value="PRESSING IRON">
+                            <option value="TELEVISION">
+                            <option value="WASHING MACHINE">
+                            <option value="WATER HEATER">
+                            <option value="BLENDER"></option>
+                            <option value="DISHWASHER"></option>
+                            <option value="COFFEE MACHINE"></option>
+                            <option value="FREEZER"></option>
+                            <option value="MICROWAVE"></option>
+                            <option value="ELECTRIC KETTLE"></option>
+                            <option value="ELECTRIC OVEN"></option>
+                            <option value="TOASTER"></option>
+                            <option value="FAN"></option>
+                            <option value="AIR CONDITIONER"></option>
+                            <option value="WATER HEATER"></option>
+                            <option value="HALOGEN"></option>
+                            <option value="LED BULB"></option>
+                            <option value="DESKTOP COMPUTER"></option>
+                            <option value="LAPTOP COMPUTER"></option>
+                            <option value="PRINTER"></option>
+                            <option value="ROUTER"></option>
+                            <option value="SMART PHONE RECHARGE"></option>
+                            <option value="SEWING MACHINE"></option>
+
+                        </datalist>
+
+                        <div> <label for="power_hr">Hour on per Day</label> </div>
+                        <div>
+                            <input type="number" id="power_hr" class="smaller" min="1" placeholder="Hour/Day"
+                                required pattern="/[0-9]/">
+                        </div>
+
+                        <div> <label for="quantity">Quantity</label> </div>
+                        <div>
+                            <input type="number" class="smaller" id="quantity_input" min="1" placeholder="Quantity"
+                                required pattern="/[0-9]/">
+                        </div>
+
+                        <div><label for="power_input">Power</label></div>
+                        <div>
+                            <input type="number" class="smaller" id="power_input" min="1" placeholder="Watt/Hour"
+                                required pattern="/[0-9]/">
+                        </div>
+
+                        <button id="btn" class="calc_button" type="submit">Add</button>
+                        
+                    </form>
+                </div>
+
+                <div class="flex1">
+                    <div>
+                        <div class="result-tab">
+                            <p id="result_heading">results</p>
+                            <p class="result-text"><span id="result_num">0</span><sub>watts</sub></p>
+
+                            <p>solar power needed</p>
+                        </div>
+
+                        <div class="buttons">
+                            <button id="but-daily" class="but but-active">Daily</button>
+
+                            <button id="but-week" class="but">Weekly</button>
+
+                            <button id="but-month" class="but">Monthly</button>
+                        </div>
+
+                    </div>
+
+                    <div class="app-list">
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </section>
+        <!-- CALCULATION-SECTION-END -->
+        
+        <!-- FOOTER-STARTED -->
+        <footer class="footer">
+            <div class="footer-back2">
+                <p>With <span><i class="fas fa-heart"></i></span> from Snehil</p>
+            </div>
+        </footer>
+        <!-- FOOTER-ENDED -->
+
+        <!-- SCRIPTS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
+        <script src="src/js/solar.js" async></script>
+
+</body>
+
+</html>
